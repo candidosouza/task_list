@@ -1,2 +1,2 @@
 # task_list
-Lista de tarefas em com react
+Lista de tarefas com react
