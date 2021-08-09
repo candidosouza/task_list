@@ -37,3 +37,36 @@
     align-items: center;
     justify-content: center;
 }
+
+.tasks {
+    margin-top: 30px;
+}
+
+.tasks li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.task li .actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.tasks li .actionEdit {
+    margin-right: 10px;
+    color: #51c5de
+}
+
+.tasks li .actionDelete {
+    color: #f04c64
+}
+
+.tasks li .actionEdit,
+.tasks li .actionDelete {
+    cursor: pointer;
+}
