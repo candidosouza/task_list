@@ -18,6 +18,22 @@ export default class Main extends Component {
     ],
   };
 
+  hendleSubmit = (e) => {
+    e.preventDefault();
+
+    const { tasks } = this.state;
+    let { newTask } = this.state;
+    newTask = newTask.trim();
+
+    if (tasks.indexOf(newTask) !== -1) return;
+
+    const newtasks = [...tasks];
+
+    this.setState({
+      tasks: [...newtasks, newTask],
+    });
+  }
+
   hendleChange = (e) => {
     this.setState({
       newTask: e.target.value,
@@ -30,7 +46,7 @@ export default class Main extends Component {
       <div className="main">
         <h1>Lista de tarefas</h1>
 
-        <form action="#" className="form">
+        <form onSubmit={this.hendleSubmit} action="#" className="form">
           <input
             onChange={this.hendleChange}
             type="text"
